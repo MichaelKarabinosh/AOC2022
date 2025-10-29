@@ -28,11 +28,12 @@ def ls_mode(input,curdir,masterdict):
     else:
         masterdict[curdir] = "dr " + fileName
 
-curdir = "a"
+curdir = "dr a"
 ls_mode("dir e", curdir, masterdict)
 print(masterdict)
 ls_mode("29116 f", curdir, masterdict)
 ls_mode("2557 g", curdir, masterdict)
+
 
 print(masterdict)
 
@@ -48,3 +49,5 @@ def change_dir(dir, curdir,masterdict):
 
     return curdir
 
+change_dir("dr a", curdir, masterdict)
+print(curdir)
