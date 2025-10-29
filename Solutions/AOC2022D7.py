@@ -1,3 +1,5 @@
+
+
 with open('../InputFiles/InputFile7', 'r') as file:
     inputfile = file.readlines()
 
@@ -9,18 +11,30 @@ for line in inputfile:
 
 
 masterdict={}
+filesize = {}
 curdir = "/"
 
 
-masterdict["/"] = "a"
+masterdict["/"] = "dr a"
 
 def ls_mode(input,curdir,masterdict):
-    arr = input.split[" "]
+    arr = input.split(" ")
     size = arr[0]
     fileName = arr[1]
-    masterdict[curdir] = masterdict[curdir] + fileName
 
+    if size.isdigit():
+        filesize[fileName] = int(size)
+        masterdict[curdir] = masterdict[curdir] + "|" + fileName + " " + size
+    else:
+        masterdict[curdir] = "dr " + fileName
 
+curdir = "a"
+ls_mode("dir e", curdir, masterdict)
+print(masterdict)
+ls_mode("29116 f", curdir, masterdict)
+ls_mode("2557 g", curdir, masterdict)
+
+print(masterdict)
 
 
 
@@ -33,3 +47,4 @@ def change_dir(dir, curdir,masterdict):
     else: curdir = dir
 
     return curdir
+
