@@ -40,14 +40,25 @@ print(masterdict)
 
 
 
-def change_dir(dir, curdir,masterdict):
-    if dir == "..":
+def cd(option, curdir,masterdict):
+    if option == "..":
         curdir = masterdict.get(curdir)
-    if dir == "/":
+    if option == "/":
         curdir = "/"
-    else: curdir = dir
+    else: curdir = "dr " + option
 
     return curdir
 
-change_dir("dr a", curdir, masterdict)
-print(curdir)
+
+def find_dir(dirtofind,masterdict):
+    return [key for key, val in masterdict.items() if val == dirtofind]
+
+masterdict["dr /"] = "dr a"
+masterdict["dr a"] = "dr e"
+masterdict["dr e"] = "584 i"
+
+print(cd("/", curdir, masterdict))
+curdir = "dr e"
+print(masterdict["dr e"])
+print(cd("..",curdir,masterdict))
+print(find_dir("dr e", masterdict))
