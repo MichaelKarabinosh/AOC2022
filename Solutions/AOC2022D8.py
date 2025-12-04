@@ -75,7 +75,7 @@ def count_scenic_score(grid,x,y):
         else:
             total_right += 1
             break
-    print(total_top, total_bottom, total_left, total_right,y,x)
+    # print(total_top, total_bottom, total_left, total_right,y,x)
     return total_top * total_bottom * total_left * total_right
 
 def part_two():
