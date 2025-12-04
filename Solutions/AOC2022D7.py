@@ -62,3 +62,4 @@ curdir = "dr e"
 print(masterdict["dr e"])
 print(cd("..",curdir,masterdict))
 print(find_dir("dr e", masterdict))
+print('hi')
